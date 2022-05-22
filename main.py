@@ -53,5 +53,3 @@ while not salir:
         salir = True
     else:
         print("Introduce un numero entre 1 y 3")
-
-print("Fin")

@@ -12,7 +12,7 @@ def laplace_transform_derivatives(e):
             n = len(d.args) - 1
             return ((s**n) * sympy.LaplaceTransform(d.args[0], t, s) -
                     sum([s**(n-i) * sympy.diff(d.args[0], t, i-1).subs(t, 0)
-                         for i in range(1, n+1)]))
+                        for i in range(1, n+1)]))
 
     if isinstance(e, (sympy.Add, sympy.Mul)):
         t = type(e)
@@ -28,7 +28,7 @@ t = sympy.symbols("t", positive=True)
 y = sympy.Function("y")
 
 # Defino la ecuación
-f = sympy.parse_expr('(y(t).diff(t, t) + 3*y(t).diff(t) + 2*y(t))')
+f = sympy.parse_expr('y(t).diff(t, t) + 3*y(t).diff(t) + 2*y(t)')
 edo = y(t).diff(t, t) + 3*y(t).diff(t) + 2*y(t)
 
 # simbolos adicionales.
@@ -57,5 +57,5 @@ Y_sol = sympy.solve(L_edo_4, Y)
 # Por último, calculamos al inversa de la Transformada de Laplace que
 # obtuvimos arriba, para obtener la solución de nuestra ecuación diferencial.
 y_sol = sympy.inverse_laplace_transform(Y_sol[0], s, t)
-
-r = sympy.pprint(y_sol)
+print('hola')
+sympy.pprint(y_sol)
