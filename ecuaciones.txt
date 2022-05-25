@@ -1,6 +1,8 @@
-ED
+EDO
 3*x*y(x).diff(x)-(x**2-9)*y(x)+1/x
 Orden superior
+y(x).diff(x,x)+4*y(x).diff(x)+4*y(x)
+y(x).diff(x,x)-y(x).diff(x)-2*y(x)
 
 
 Laplace Simple
@@ -10,3 +12,10 @@ exp(-t)*sin(t)
 Laplace Inversa
 ((s+1)**3)/(s**4)
 5*(s+1)/(s+3)**2
+
+
+EDO GRADO DOS CON VALORES iniciales de grado 2
+y(x).diff(x, x)-y(x).diff(x)-2*y(x),0, 2, 0, 1
+
+EDO GRADO DOS CON VALORES iniciales de grado 1
+(y(x)**2)/x**2; 1,0.5

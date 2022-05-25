@@ -32,10 +32,13 @@ while not salir:
     op = pedirNumeroEntero()
     if op == 1:
         print('--------------------------------Ecuacion diferencial--------------------------------\n')
-        ec = input(
-            'Introduzca la ecuacion a resolver por ejemplo 3*x*y(x).diff(x)-(x**2-9)*y(x)+1/x \n')
-        print('La solucion para ', ec, 'es: \n')
-        ed_f(ec)
+        print('Desea resolver ecuaciones diferenciales con condiciones iniciales\n')
+        print('1. Si\n2. No')
+        opE = pedirNumeroEntero()
+        if opE == 1:
+            print('Ingrese la ecuacion diferencial de grado 2\n')
+            ec = input()
+            print('Ingrese la primera condicion incial ')
 
     elif op == 2:
         print('--------------------------------Transformada de laplace--------------------------------\n')
@@ -53,4 +56,3 @@ while not salir:
         salir = True
     else:
         print("Introduce un numero entre 1 y 3")
-   
