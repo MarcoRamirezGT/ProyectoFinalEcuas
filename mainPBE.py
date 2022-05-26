@@ -141,30 +141,66 @@ class Window(QMainWindow):
         def on_click(self):
             if(laplace.isEnabled()):
 
-                ec = line_edit.text()
-                res = laplace_simple(ec)
-                resultado.setText(str(res))
+                if(line_edit.text() == ' '):
+                    dlg = QMessageBox()
+                    dlg.setWindowTitle("ERROR!")
+                    dlg.setText("Introduce una ecuacion ")
+                    button = dlg.exec()
+
+                    if button == QMessageBox.Ok:
+                        print("OK!")
+                else:
+                    ec = line_edit.text()
+                    res = laplace_simple(ec)
+                    resultado.setText(str(res))
 
             if(laplaceInv.isEnabled()):
-                ec = line_edit.text()
-                res = laplace_inv(ec)
-                resultado.setText(str(res))
+                if(line_edit.text() == ' '):
+                    dlg = QMessageBox()
+                    dlg.setWindowTitle("ERROR!")
+                    dlg.setText("Introduce una ecuacion ")
+                    button = dlg.exec()
+
+                    if button == QMessageBox.Ok:
+                        print("OK!")
+                else:
+                    ec = line_edit.text()
+                    res = laplace_inv(ec)
+                    resultado.setText(str(res))
 
             if(edo.isEnabled()):
-                ec = line_edit.text()
-                res = ed_f(ec)
-                resultado.setText(str(res))
+                if(line_edit.text() == ' '):
+                    dlg = QMessageBox()
+                    dlg.setWindowTitle("ERROR!")
+                    dlg.setText("Introduce una ecuacion diferencial")
+                    button = dlg.exec()
+
+                    if button == QMessageBox.Ok:
+                        print("OK!")
+                else:
+                    ec = line_edit.text()
+                    res = ed_f(ec)
+                    resultado.setText(str(res))
 
             if(edoCi.isEnabled()):
+                if(line_edit.text() == ' '):
+                    dlg = QMessageBox()
+                    dlg.setWindowTitle("ERROR!")
+                    dlg.setText("Introduce una ecuacion diferencial")
+                    button = dlg.exec()
 
-                ec = line_edit.text()
-                x1_ec = int(x1.text())
-                y1_ec = int(y1.text())
-                x2_ec = int(x1.text())
-                y2_ec = int(y1.text())
+                    if button == QMessageBox.Ok:
+                        print("OK!")
+                else:
 
-                res = edo_CI2(ec, x1_ec, y1_ec, x2_ec, y2_ec)
-                resultado.setText(str(res))
+                    ec = line_edit.text()
+                    x1_ec = int(x1.text())
+                    y1_ec = int(y1.text())
+                    x2_ec = int(x1.text())
+                    y2_ec = int(y1.text())
+
+                    res = edo_CI2(ec, x1_ec, y1_ec, x2_ec, y2_ec)
+                    resultado.setText(str(res))
         # creating a label
         title = QLabel('Calculadora', self)
         title.setGeometry(150, 15, 120, 60)
@@ -237,7 +273,7 @@ class Window(QMainWindow):
         ej.setGeometry(100, 100, 500, 40)
         ej.move(150, 200)
 
-        line_edit = QLineEdit("", self)
+        line_edit = QLineEdit(" ", self)
         line_edit.setGeometry(100, 100, 300, 40)
         line_edit.move(100, 230)
 
