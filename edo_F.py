@@ -13,4 +13,5 @@ def ed_f(ec):
 
     # Resolviendo la ecuación
     f = parse_expr(ec)
-    pprint(dsolve(f))
+    r = (dsolve(f))
+    return r

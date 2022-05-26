@@ -29,6 +29,7 @@ class UI(QMainWindow):
         self.clear.clicked.connect(self.limpiar)
         self.instruc.clicked.connect(self.mos_ins)
       #  self.calcular.clicked.connect(ed_f(str(self.ingresa)))
+        self.calcular.clicked(self.ingresa.setPlainText('funaciona'))
 
         # Show de UI
         self.show()

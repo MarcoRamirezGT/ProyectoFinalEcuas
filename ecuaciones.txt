@@ -1,6 +1,5 @@
 EDO
 3*x*y(x).diff(x)-(x**2-9)*y(x)+1/x
-Orden superior
 y(x).diff(x,x)+4*y(x).diff(x)+4*y(x)
 y(x).diff(x,x)-y(x).diff(x)-2*y(x)
 

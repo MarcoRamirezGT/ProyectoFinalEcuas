@@ -21,8 +21,6 @@ def edo_CI2(ec, x1, y1, x2, y2):
     # Solution
     sol = dsolve(eqdiff, y(x))
 
-    pprint(sol)
-
     # Print latex representation
 
     ics = {y(x1): y1, y(x).diff(x).subs(x, x2): y2}
@@ -32,7 +30,4 @@ def edo_CI2(ec, x1, y1, x2, y2):
 
     Y_sol = dsolve(L_edo_4, y(x))
 
-    pprint(Y_sol)
-
-
-edo_CI2("y(x).diff(x, x)-y(x).diff(x)-2*y(x)", 0, 2, 0, 1)
+    return Y_sol

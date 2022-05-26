@@ -12,4 +12,4 @@ def laplace_inv(ec):
     # Laplace transform (t->s)
     f = parse_expr(ec)
     U = inverse_laplace_transform(f, s, t)
-    pprint(U)
+    return U

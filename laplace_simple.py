@@ -12,4 +12,4 @@ def laplace_simple(ec):
     # Laplace transform (t->s)
     f = parse_expr(ec)
     U = laplace_transform(f, t, s)
-    pprint(U[0])
+    return U[0]

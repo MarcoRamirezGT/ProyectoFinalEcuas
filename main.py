@@ -1,7 +1,7 @@
 from edo_F import ed_f
 from laplace_simple import laplace_simple
 from laplace_inv import laplace_inv
-
+from edo_CI2 import edo_CI2
 from sympy import *
 
 salir = False
