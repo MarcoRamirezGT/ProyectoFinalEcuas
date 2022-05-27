@@ -1,9 +1,11 @@
 from unittest import result
 from PyQt5.QtWidgets import *
-from PyQt5 import QtCore, QtGui
+from PyQt5 import QtCore, QtGui, uic, QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys
+
+from matplotlib.pyplot import text
 from edo_F import ed_f
 from laplace_simple import laplace_simple
 from laplace_inv import laplace_inv
@@ -18,10 +20,11 @@ class Window(QMainWindow):
 
         # setting title
         self.setWindowTitle("Ecuaciones diferenciales ")
+        #self.setStyleSheet("background:azure") para ver el color del background. 
 
         # setting geometry
         self.setGeometry(500, 500, 500, 500)
-        self.setFixedSize(500, 500)
+        self.setFixedSize(600, 500)
         self.move(200, 200)
         # calling method
         self.UiComponents()
@@ -201,6 +204,11 @@ class Window(QMainWindow):
 
                     res = edo_CI2(ec, x1_ec, y1_ec, x2_ec, y2_ec)
                     resultado.setText(str(res))
+
+        def openWindow(self):
+            uic.loadUi("main.ui", self)
+
+
         # creating a label
         title = QLabel('Calculadora', self)
         title.setGeometry(150, 15, 120, 60)
@@ -282,6 +290,20 @@ class Window(QMainWindow):
         calcular.move(200, 290)
         calcular.clicked.connect(on_click)
         calcular.setEnabled(False)
+
+        #boton de ecuaciones verificadas 
+        verificadas = QPushButton('ED Verificadas', self)
+        verificadas.setGeometry(100, 100, 100, 40)
+        verificadas.move(350, 290)
+        verificadas.clicked.connect(openWindow)
+
+
+        #boton de Youtube para el video. 
+        videoDEMO = QPushButton('Instrucciones', self)
+        videoDEMO.setGeometry(100, 100, 100, 40)
+        videoDEMO.move(50, 290)
+
+
 
         resultado = QLabel("El resultado es: ", self)
         resultado.setGeometry(50, 50, 500, 50)
