@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, uic, QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+import webbrowser
 import sys
 
 from matplotlib.pyplot import text
@@ -206,7 +207,10 @@ class Window(QMainWindow):
                     resultado.setText(str(res))
 
         def openWindow(self):
-            uic.loadUi("main.ui", self)
+            webbrowser.open("https://github.com/MarcoRamirezGT/ProyectoFinalEcuas/blob/main/ecuaciones.txt")
+
+        def video(self):
+            webbrowser.open("https://www.youtube.com/watch?v=GSr28vUbJxw&ab_channel=MauroElAwesome")
 
 
         # creating a label
@@ -302,7 +306,7 @@ class Window(QMainWindow):
         videoDEMO = QPushButton('Instrucciones', self)
         videoDEMO.setGeometry(100, 100, 100, 40)
         videoDEMO.move(50, 290)
-
+        videoDEMO.clicked.connect(video)
 
 
         resultado = QLabel("El resultado es: ", self)
