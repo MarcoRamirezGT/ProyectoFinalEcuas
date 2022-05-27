@@ -1,3 +1,7 @@
+Esta es un archivo en el que se pueden encontrar ecuaciones diferenciales que han sido 
+resultas mediante la calculadora, si se desea tener una idea del tipo de ecuaciones que
+se pueden realizar, estos son unos ejemplos:
+
 EDO
 3*x*y(x).diff(x)-(x**2-9)*y(x)+1/x
 y(x).diff(x,x)+4*y(x).diff(x)+4*y(x)
