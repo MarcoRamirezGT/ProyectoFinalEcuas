@@ -21,7 +21,7 @@ class Window(QMainWindow):
 
         # setting title
         self.setWindowTitle("Ecuaciones diferenciales ")
-        #self.setStyleSheet("background:azure") para ver el color del background. 
+        # self.setStyleSheet("background:azure") para ver el color del background.
 
         # setting geometry
         self.setGeometry(500, 500, 500, 500)
@@ -207,11 +207,12 @@ class Window(QMainWindow):
                     resultado.setText(str(res))
 
         def openWindow(self):
-            webbrowser.open("https://github.com/MarcoRamirezGT/ProyectoFinalEcuas/blob/main/ecuaciones.txt")
+            webbrowser.open(
+                "https://github.com/MarcoRamirezGT/ProyectoFinalEcuas/blob/main/ecuaciones.txt")
 
         def video(self):
-            webbrowser.open("https://www.youtube.com/watch?v=GSr28vUbJxw&ab_channel=MauroElAwesome")
-
+            webbrowser.open(
+                "https://www.youtube.com/watch?v=82v5D64QMxg&ab_channel=MarcoRamirez")
 
         # creating a label
         title = QLabel('Calculadora', self)
@@ -295,19 +296,17 @@ class Window(QMainWindow):
         calcular.clicked.connect(on_click)
         calcular.setEnabled(False)
 
-        #boton de ecuaciones verificadas 
+        # boton de ecuaciones verificadas
         verificadas = QPushButton('ED Verificadas', self)
         verificadas.setGeometry(100, 100, 100, 40)
         verificadas.move(350, 290)
         verificadas.clicked.connect(openWindow)
 
-
-        #boton de Youtube para el video. 
+        # boton de Youtube para el video.
         videoDEMO = QPushButton('Instrucciones', self)
         videoDEMO.setGeometry(100, 100, 100, 40)
         videoDEMO.move(50, 290)
         videoDEMO.clicked.connect(video)
-
 
         resultado = QLabel("El resultado es: ", self)
         resultado.setGeometry(50, 50, 500, 50)
