@@ -6,7 +6,7 @@
 
 Marco Ramírez 19588 <br />
 Alfredo Quezada <br />
-Javier Hernandez <br />
+Javier Hernandez 19202 <br />
 
 El presente trabajo es una calculadora en base al curso de Ecuaciones Diferenciales 1
 
