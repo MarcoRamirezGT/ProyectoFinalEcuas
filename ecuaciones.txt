@@ -1,5 +1,5 @@
 Esta es un archivo en el que se pueden encontrar ecuaciones diferenciales que han sido 
-resultas mediante la calculadora, si se desea tener una idea del tipo de ecuaciones que
+probadas mediante la calculadora, si se desea tener una idea del tipo de ecuaciones que
 se pueden realizar, estos son unos ejemplos:
 
 EDO
@@ -8,7 +8,7 @@ y(x).diff(x,x)+4*y(x).diff(x)+4*y(x)
 y(x).diff(x,x)-y(x).diff(x)-2*y(x)
 
 
-Laplace Simple
+Laplace 
 exp(-t)*sin(t)
 
 
@@ -18,7 +18,4 @@ Laplace Inversa
 
 
 EDO GRADO DOS CON VALORES iniciales de grado 2
-y(x).diff(x, x)-y(x).diff(x)-2*y(x),0, 2, 0, 1
-
-EDO GRADO DOS CON VALORES iniciales de grado 1
-(y(x)**2)/x**2; 1,0.5
+y(x).diff(x, x)-y(x).diff(x)-2*y(x); y(0)=2; y'(0)=1
